@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Vérification des Recharges</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="verification.html">Vérification</a>
+        <a href="#contact">Contact Clientèle</a>
+    </div>
+
+    <div class="container">
+        <h1>Vérifiez vos recharges/cartes en toute sécurité</h1>
+        <h2>Comment Faire Une Vérification de Ticket Transcash?</h2>
+        <p>Notre système de vérification vous permet de vérifier votre ticket/coupon transcash sans posséder une carte transcash et ce gratuitement, en toute sécurité et de façon illimitée 24h/7.</p>
+
+        <h3>Transcash</h3>
+        <p>Cette méthode consiste à remplir un formulaire.</p>
+
+        <h3>PCS</h3>
+        <p>Cette méthode consiste à remplir un formulaire.</p>
+
+        <h3>Steam</h3>
+        <p>Cette méthode consiste à remplir un formulaire.</p>
+
+        <h2>Horaires D'OUVERTURE</h2>
+        <p>Lu-Ve 07j/24H<br>Sa-Di 8h/13H</p>
+
+        <h2>NOUS TROUVER</h2>
+        <p>123 Rue du test<br>Paris, 75001</p>
+
+        <h2>Contact</h2>
+        <p>Email : <a href="mailto:ladirectiontranscashpcs@gmail.com">ladirectiontranscashpcs@gmail.com</a></p>
+
+        <div class="footer">
+            <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a> | <a href="#">Politique des cookies</a> | <a href="#">Plan du site</a></p>
+            <p>Connexion Jimdo | Ce site a été conçu avec Jimdo. Inscrivez-vous gratuitement sur <a href="https://fr.jimdo.com">https://fr.jimdo.com</a></p>
+        </div>
+    </div>
+</body>
+</html>
